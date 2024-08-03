@@ -1,0 +1,54 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+#include <cstring>
+
+int main(int argc, char* argv[]) {
+    if (argc != 5) {
+        std::cerr << "Uso: generator -size <SIZE> -output <OUTPUT FILE PATH>\n";
+        return 1;
+    }
+
+    const char* sizeFlag = argv[1];
+    const char* sizeArg = argv[2];
+    const char* outputFlag = argv[3];
+    const char* outputPath = argv[4];
+
+    if (strcmp(sizeFlag, "-size") != 0 || strcmp(outputFlag, "-output") != 0) {
+        std::cerr << "Uso: generator -size <SIZE> -output <OUTPUT FILE PATH>\n";
+        return 1;
+    }
+
+    int fileSize;
+    if (strcmp(sizeArg, "SMALL") == 0) {
+        fileSize = 512 * 1024 * 1024; // 512 MB
+    } else if (strcmp(sizeArg, "MEDIUM") == 0) {
+        fileSize = 1 * 1024 * 1024 * 1024; // 1 GB
+    } else if (strcmp(sizeArg, "LARGE") == 0) {
+        fileSize = 2 * 1024 * 1024 * 1024; // 2 GB
+    } else {
+        std::cerr << "Tamaño desconocido. Use SMALL, MEDIUM, o LARGE.\n";
+        return 1;
+    }
+
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    std::ofstream outputFile(outputPath, std::ios::binary);
+    if (!outputFile.is_open()) {
+        std::cerr << "Error al abrir el archivo para escritura en: " << outputPath << "\n";
+        return 1;
+    }
+
+    std::cout << "Comenzando a escribir en el archivo...\n"; // Mensaje de depuración
+    for (int i = 0; i < fileSize / sizeof(int); ++i) {
+        int randomInt = std::rand();
+        outputFile.write(reinterpret_cast<const char*>(&randomInt), sizeof(randomInt));
+    }
+    std::cout << "Escritura completada.\n"; // Mensaje de depuración
+
+    outputFile.close();
+    std::cout << "Archivo generado exitosamente en: " << outputPath << "\n";
+
+    return 0;
+}

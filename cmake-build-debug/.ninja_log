@@ -1,0 +1,6 @@
+# ninja log v6
+2	439	7444136131693841	build.ninja	a002cf9ad0f8d0e4
+3	723	7444123682305864	CMakeFiles/TareaExtraclase1.dir/generator.cpp.obj	815a8206ffe06fb0
+1103	1297	7444132610899869	TareaExtraclase1.exe	b489021c137d903e
+7	1103	7444132599941427	CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj	6f67f7542b6cd454
+10	1012	7444131586878094	CMakeFiles/TareaExtraclase1.dir/test.cpp.obj	e5d0a1e8704f2f0b
