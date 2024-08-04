@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
 
-    std::ofstream outputFile(outputFilePath, std::ios::binary);
+    std::ofstream outputFile(outputFilePath); // Open file as text
     if (!outputFile.is_open()) {
         std::cerr << "Error al abrir el archivo para escritura en: " << outputFilePath << "\n";
         return 1;
@@ -82,7 +82,13 @@ int main(int argc, char* argv[]) {
 
     for (std::size_t i = 0; i < numElements; ++i) {
         int value = pagedArray[i];
-        outputFile.write(reinterpret_cast<const char*>(&value), sizeof(value));
+        outputFile << value;
+        if (i < numElements - 1) {
+            outputFile << ","; // Add comma separator
+        }
+        if (i % (numElements / 10) == 0) { // Print progress every 10% of the total elements
+            std::cout << "Escribiendo elemento: " << i << "\n";
+        }
     }
 
     outputFile.close();
@@ -95,6 +101,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
-
-
