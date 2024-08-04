@@ -4,7 +4,7 @@
 #include <ctime>
 #include <cstring>
 
-int main(int argc, char* argv[]) {
+int main2(int argc, char* argv[]) {
     if (argc != 5) {
         std::cerr << "Uso: generator -size <SIZE> -output <OUTPUT FILE PATH>\n";
         return 1;

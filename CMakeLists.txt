@@ -3,5 +3,17 @@ project(TareaExtraclase1)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(TareaExtraclase1 Generator/generator.cpp
+# Agregar el directorio de encabezados
+include_directories(${CMAKE_SOURCE_DIR}/Sorter)
+
+add_executable(TareaExtraclase1
+        Generator/generator.cpp
+        Sorter/PagedArray.cpp
+        Sorter/sorter.cpp
+        Sorter/Algorithms/quickSort.cpp
+        Sorter/Algorithms/insertionSort.cpp
+        Sorter/Algorithms/bubbleSort.cpp
+        Sorter/Algorithms/quickSort.h
+        Sorter/Algorithms/bubbleSort.h
+        Sorter/Algorithms/insertionSort.h
 )

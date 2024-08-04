@@ -52,8 +52,44 @@ build cmake_object_order_depends_target_TareaExtraclase1: phony || CMakeFiles/Ta
 build CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Generator/generator.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Generator\generator.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Generator
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/PagedArray.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/PagedArray.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\PagedArray.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/sorter.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\sorter.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/quickSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\quickSort.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/insertionSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\insertionSort.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Debug C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/bubbleSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\bubbleSort.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 
 
 # =============================================================================
@@ -63,7 +99,7 @@ build CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the executable TareaExtraclase1.exe
 
-build TareaExtraclase1.exe: CXX_EXECUTABLE_LINKER__TareaExtraclase1_Debug CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj
+build TareaExtraclase1.exe: CXX_EXECUTABLE_LINKER__TareaExtraclase1_Debug CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/PagedArray.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
