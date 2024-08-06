@@ -1,3 +1,0 @@
-C:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/cmake-build-debug/CMakeFiles/TareaExtraclase1.dir
-C:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

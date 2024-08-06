@@ -7,6 +7,7 @@
 #include "PagedArray.h"
 #include "Algorithms/bubbleSort.h"
 #include "Algorithms/insertionSort.h"
+#include "Algorithms/NoSort.h"
 #include "Algorithms/quickSort.h"
 
 int main(int argc, char* argv[]) {
@@ -30,18 +31,11 @@ int main(int argc, char* argv[]) {
     std::cout << "Ruta del archivo de salida: " << outputFilePath << "\n";
     std::cout << "Algoritmo seleccionado: " << algorithm << "\n";
 
-    // Copiar archivo de entrada al archivo de salida
-    std::ifstream src(inputFilePath, std::ios::binary);
-    std::ofstream dst(outputFilePath, std::ios::binary);
-    dst << src.rdbuf();
-    src.close();
-    dst.close();
+    PagedArray pagedArray(inputFilePath);
 
-    PagedArray pagedArray(outputFilePath);
-
-    std::ifstream inputFile(outputFilePath, std::ios::binary | std::ios::ate);
+    std::ifstream inputFile(inputFilePath, std::ios::binary | std::ios::ate);
     if (!inputFile.is_open()) {
-        std::cerr << "Error al abrir el archivo para lectura en: " << outputFilePath << "\n";
+        std::cerr << "Error al abrir el archivo para lectura en: " << inputFilePath << "\n";
         return 1;
     }
     std::size_t fileSize = inputFile.tellg();
@@ -74,20 +68,27 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
 
-    std::ofstream outputFile(outputFilePath); // Open file as text
+
+
+    int percentage = 0;
+    std::string str2 = "";
+
+    std::ofstream outputFile(outputFilePath, std::ios::trunc); // Open file as text
     if (!outputFile.is_open()) {
         std::cerr << "Error al abrir el archivo para escritura en: " << outputFilePath << "\n";
         return 1;
     }
 
     for (std::size_t i = 0; i < numElements; ++i) {
-        int value = pagedArray[i];
-        outputFile << value;
-        if (i < numElements - 1) {
-            outputFile << ","; // Add comma separator
+        outputFile << pagedArray[i];
+        if(i != numElements - 1) {
+            outputFile << ",";
         }
-        if (i % (numElements / 10) == 0) { // Print progress every 10% of the total elements
-            std::cout << "Escribiendo elemento: " << i << "\n";
+
+
+        if (i % (numElements / 100) == 0) { // Print progress every 10% of the total elements
+            std::cout << percentage << "%" << "\n";
+            percentage += 1;
         }
     }
 

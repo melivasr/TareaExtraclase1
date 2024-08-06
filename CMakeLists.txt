@@ -10,10 +10,13 @@ add_executable(TareaExtraclase1
         Generator/generator.cpp
         Sorter/PagedArray.cpp
         Sorter/sorter.cpp
-        Sorter/Algorithms/quickSort.cpp
         Sorter/Algorithms/insertionSort.cpp
         Sorter/Algorithms/bubbleSort.cpp
         Sorter/Algorithms/quickSort.h
         Sorter/Algorithms/bubbleSort.h
         Sorter/Algorithms/insertionSort.h
+        Sorter/Algorithms/quickSort.cpp
+        Sorter/Algorithms/quickSort.cpp
+        Sorter/Algorithms/NoSort.cpp
+        Sorter/Algorithms/NoSort.h
 )

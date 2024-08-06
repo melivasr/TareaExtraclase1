@@ -20,13 +20,16 @@ int main2(int argc, char* argv[]) {
         return 1;
     }
 
-    int fileSize;
-    if (strcmp(sizeArg, "SMALL") == 0) {
-        fileSize = 512 * 1024 * 1024; // 512 MB
+    long fileSize;
+    long constexpr megabyte = 1024 * 1024;
+    if (strcmp(sizeArg, "XXSMALL") == 0) {
+        fileSize = megabyte; // 1 MB
+    } else if (strcmp(sizeArg, "SMALL") == 0) {
+        fileSize = 512 * megabyte; // 512 MB
     } else if (strcmp(sizeArg, "MEDIUM") == 0) {
-        fileSize = 1 * 1024 * 1024 * 1024; // 1 GB
+        fileSize = 1 * 1024 * megabyte; // 1 GB
     } else if (strcmp(sizeArg, "LARGE") == 0) {
-        fileSize = 2 * 1024 * 1024 * 1024; // 2 GB
+        fileSize = (2 * 1024 * megabyte); // 2 GB
     } else {
         std::cerr << "Tamaño desconocido. Use SMALL, MEDIUM, o LARGE.\n";
         return 1;

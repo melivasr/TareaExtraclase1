@@ -70,13 +70,6 @@ build CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj: CXX_COMPILER__Tarea
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter
 
-build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/quickSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
-  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\quickSort.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
-  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
-  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
-
 build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/insertionSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\insertionSort.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
@@ -91,6 +84,20 @@ build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 
+build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/quickSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\quickSort.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
+
+build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/NoSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/NoSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
+  DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\NoSort.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
+  OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TareaExtraclase1
@@ -99,7 +106,7 @@ build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj: CXX_
 #############################################
 # Link the executable TareaExtraclase1.exe
 
-build TareaExtraclase1.exe: CXX_EXECUTABLE_LINKER__TareaExtraclase1_Release CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/PagedArray.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj
+build TareaExtraclase1.exe: CXX_EXECUTABLE_LINKER__TareaExtraclase1_Release CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/PagedArray.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/NoSort.cpp.obj
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
