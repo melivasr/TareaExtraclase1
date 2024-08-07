@@ -77,7 +77,7 @@ Este programa en C++ sirve para ordenar archivos binarios grandes utilizando dif
 2. **Compila el código utilizando `g++`:**
 
     ```bash
-    g++ -o Sorter/sorter.exe Sorter/sorter.cpp Sorter/PagedArray.cpp Sorter/Algorithms/bubbleSort.cpp Sorter/Algorithms/insertionSort.cpp Sorter/Algorithms/quickSort.cpp -ISorter
+    g++ -o sorter.exe sorter.cpp PagedArray.cpp Algorithms/bubbleSort.cpp Algorithms/insertionSort.cpp Algorithms/quickSort.cpp -I
     ```
 
     - `-o Sorter/sorter.exe` especifica el nombre del archivo ejecutable resultante.
