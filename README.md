@@ -45,7 +45,7 @@ Para ejecutar el generador, usa el siguiente comando, ajustando el tamaño y la 
 
 Por ejemplo:
 ```bash
-.\Generator\generator.exe -size XXSMALL -output C:\Users\melis\OneDrive\Documents\GitHub\TareaExtraclase1\Generator\input.dat
+.\generator.exe -size XXSMALL -output C:\Users\melis\OneDrive\Documents\GitHub\TareaExtraclase1\Generator\input.dat
 ```
 
 # Algoritmo Sorter
@@ -68,16 +68,10 @@ Este programa en C++ sirve para ordenar archivos binarios grandes utilizando dif
 
 ## Instrucciones de Compilación
 
-1. **Asegúrate de estar en el directorio raíz del programa:**
+**Compila el código utilizando `g++`:**
 
     ```bash
-    cd <SORTER DIRECTORY PATH>
-    ```
-
-2. **Compila el código utilizando `g++`:**
-
-    ```bash
-    g++ -o sorter.exe sorter.cpp PagedArray.cpp Algorithms/bubbleSort.cpp Algorithms/insertionSort.cpp Algorithms/quickSort.cpp -I
+    g++ -o Sorter/sorter.exe Sorter/sorter.cpp Sorter/PagedArray.cpp Sorter/Algorithms/bubbleSort.cpp Sorter/Algorithms/insertionSort.cpp Sorter/Algorithms/quickSort.cpp -ISorter
     ```
 
     - `-o Sorter/sorter.exe` especifica el nombre del archivo ejecutable resultante.
