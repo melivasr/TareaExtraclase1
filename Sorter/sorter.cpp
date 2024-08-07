@@ -13,10 +13,7 @@
 #include "Algorithms/quickSort.h"
 
 int main(int argc, char* argv[]) {
-    std::cout << "Número de argumentos: " << argc << "\n";
-    for (int i = 0; i < argc; ++i) {
-        std::cout << "Argumento " << i << ": " << argv[i] << "\n";
-    }
+    std::cout << "Numero de argumentos: " << argc << "\n";
 
     // Verifica que los argumentos sean correctos
     if (argc != 7) {
@@ -51,9 +48,9 @@ int main(int argc, char* argv[]) {
     std::size_t fileSize = inputFile.tellg();
     std::size_t numElements = fileSize / sizeof(int);
 
-    // Verifica que el tamaño del archivo sea múltiplo del tamaño de un entero
+    // Verifica que el tamano del archivo sea múltiplo del tamaño de un entero
     if (fileSize % sizeof(int) != 0) {
-        std::cerr << "El tamaño del archivo no es multiplo del tamano de un entero.\n";
+        std::cerr << "El tamano del archivo no es multiplo del tamano de un entero.\n";
         return 1;
     }
 
@@ -94,7 +91,7 @@ int main(int argc, char* argv[]) {
         if (i != numElements - 1) {
             outputFile << ",";
         }
-        
+
         if (i % (numElements / 100) == 0) {
             std::cout << percentage << "%" << "\n";
             percentage += 1;
