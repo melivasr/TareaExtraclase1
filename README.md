@@ -33,7 +33,7 @@ Para ejecutar el generador, usa el siguiente comando, ajustando el tamaño y la 
 ```
 **-size <SIZE>**: Tamaño del archivo que se desea generar. Puede tomar uno de los siguientes valores:
 
-**XXSMALL:** genera un archivo de 1KB
+**XXSMALL:** genera un archivo de 1 MB
 
 **SMALL:** genera un archivo de 512 MB
 
