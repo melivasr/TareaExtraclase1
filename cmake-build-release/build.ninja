@@ -52,49 +52,49 @@ build cmake_object_order_depends_target_TareaExtraclase1: phony || CMakeFiles/Ta
 build CMakeFiles/TareaExtraclase1.dir/Generator/generator.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Generator/generator.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Generator\generator.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Generator
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/PagedArray.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/PagedArray.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\PagedArray.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/sorter.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/sorter.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\sorter.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/insertionSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/insertionSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\insertionSort.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/bubbleSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/bubbleSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\bubbleSort.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/quickSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/quickSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\quickSort.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 
 build CMakeFiles/TareaExtraclase1.dir/Sorter/Algorithms/NoSort.cpp.obj: CXX_COMPILER__TareaExtraclase1_unscanned_Release C$:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms/NoSort.cpp || cmake_object_order_depends_target_TareaExtraclase1
   DEP_FILE = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms\NoSort.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter
+  INCLUDES = -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter -IC:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/Algorithms
   OBJECT_DIR = CMakeFiles\TareaExtraclase1.dir
   OBJECT_FILE_DIR = CMakeFiles\TareaExtraclase1.dir\Sorter\Algorithms
 

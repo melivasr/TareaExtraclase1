@@ -1,4 +1,3 @@
-// Created by Melissa Vásquez.
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -16,24 +15,23 @@ int main(int argc, char* argv[]) {
     const char* outputFlag = argv[3];
     const char* outputPath = argv[4];
 
-    // Verifica que las banderas de los argumentos sean correctas
     if (strcmp(sizeFlag, "-size") != 0 || strcmp(outputFlag, "-output") != 0) {
         std::cerr << "Uso: generator -size <SIZE> -output <OUTPUT FILE PATH>\n";
         return 1;
     }
 
     long long fileSize;
-    long long constexpr megabyte = 1024 * 1024LL;
+    long long constexpr megabyte = 1024 * 1024;
     if (strcmp(sizeArg, "XXSMALL") == 0) {
-        fileSize = 1024LL; // 1 KB
+        fileSize = megabyte; // 1 MB
     } else if (strcmp(sizeArg, "SMALL") == 0) {
         fileSize = 512 * megabyte; // 512 MB
     } else if (strcmp(sizeArg, "MEDIUM") == 0) {
         fileSize = 1 * 1024 * megabyte; // 1 GB
     } else if (strcmp(sizeArg, "LARGE") == 0) {
-        fileSize = 2 * 1024 * megabyte; // 2 GB
+        fileSize = (2 * 1024 * megabyte); // 2 GB
     } else {
-        std::cerr << "Tamano desconocido. Use XXSMALL, SMALL, MEDIUM, o LARGE.\n";
+        std::cerr << "Tamaño desconocido. Use XXSMALL, SMALL, MEDIUM, o LARGE.\n";
         return 1;
     }
 
@@ -45,13 +43,12 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::cout << "Comenzando a escribir en el archivo...\n";
-    // Escribe numeros enteros aleatorios en el archivo hasta alcanzar el tamano deseado
-    for (long long i = 0; i < fileSize / sizeof(int); ++i) {
+    std::cout << "Comenzando a escribir en el archivo...\n"; // Mensaje de depuración
+    for (int i = 0; i < fileSize / sizeof(int); ++i) {
         int randomInt = std::rand();
         outputFile.write(reinterpret_cast<const char*>(&randomInt), sizeof(randomInt));
     }
-    std::cout << "Escritura completada.\n";
+    std::cout << "Escritura completada.\n"; // Mensaje de depuración
 
     outputFile.close();
     std::cout << "Archivo generado exitosamente en: " << outputPath << "\n";
