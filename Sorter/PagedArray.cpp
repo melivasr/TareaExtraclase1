@@ -12,6 +12,7 @@ PagedArray::PagedArray(const std::string& filePath)
         exit(1);
     }
 
+    // Inicializa las paginas y los mapas de paginas
     for (int i = 0; i < MAX_PAGES; ++i) {
         pages[i] = new int[PAGE_SIZE / sizeof(int)];
         loadedPages[i] = false;
@@ -21,6 +22,7 @@ PagedArray::PagedArray(const std::string& filePath)
     srand(static_cast<unsigned>(time(0)));
 }
 
+// Descarga las paginas y libera memoria
 PagedArray::~PagedArray() {
     for (int i = 0; i < MAX_PAGES; ++i) {
         if (loadedPages[i]) {
@@ -33,6 +35,7 @@ PagedArray::~PagedArray() {
     }
 }
 
+// Carga una pagina en memoria
 void PagedArray::loadPage(int pageIndex) {
     int pageSlot = -1;
 
@@ -63,6 +66,7 @@ void PagedArray::loadPage(int pageIndex) {
     ++pageFaults;
 }
 
+// Descarga una pagina de memoria
 void PagedArray::unloadPage(int pageIndex) {
     int pageSlot = -1;
     std::cout << "Descargando pagina: " << pageIndex << "\n";
@@ -84,10 +88,11 @@ void PagedArray::unloadPage(int pageIndex) {
         }
 
         loadedPages[pageSlot] = false;
-        pageMap[pageSlot] = -1; // Marca el slot como no cargado
+        pageMap[pageSlot] = -1;
     }
 }
 
+// Verifica si todas las paginas están cargadas
 bool PagedArray::allLoaded() const {
     for (int i = 0; i < MAX_PAGES; ++i) {
         if (!loadedPages[i]) {
@@ -97,11 +102,13 @@ bool PagedArray::allLoaded() const {
     return true;
 }
 
+// Sobrecarga del operador [] para acceder a elementos
 int& PagedArray::operator[](std::size_t index) {
     int pageIndex = index / (PAGE_SIZE / sizeof(int));
     int offset = index % (PAGE_SIZE / sizeof(int));
     int pageSlot = -1;
 
+    // Busca la pagina en memoria
     for (int i = 0; i < MAX_PAGES; ++i) {
         if (pageMap[i] == pageIndex) {
             pageSlot = i;
@@ -110,6 +117,7 @@ int& PagedArray::operator[](std::size_t index) {
         }
     }
 
+    // Si la pagina no esta en memoria, la carga
     if (pageSlot == -1) {
         loadPage(pageIndex);
         for (int i = 0; i < MAX_PAGES; ++i) {
@@ -134,4 +142,3 @@ int PagedArray::getPageHits() const {
 void PagedArray::setNumElements(std::size_t elements) {
     numElements = elements;
 }
-

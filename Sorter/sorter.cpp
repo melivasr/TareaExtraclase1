@@ -1,3 +1,5 @@
+// Created by Melissa Vásquez.
+
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -16,6 +18,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Argumento " << i << ": " << argv[i] << "\n";
     }
 
+    // Verifica que los argumentos sean correctos
     if (argc != 7) {
         std::cerr << "Uso: sorter -input <INPUT FILE PATH> -output <OUTPUT FILE PATH> -alg <ALGORITMO>\n";
         return 1;
@@ -48,16 +51,18 @@ int main(int argc, char* argv[]) {
     std::size_t fileSize = inputFile.tellg();
     std::size_t numElements = fileSize / sizeof(int);
 
+    // Verifica que el tamaño del archivo sea múltiplo del tamaño de un entero
     if (fileSize % sizeof(int) != 0) {
-        std::cerr << "El tamaño del archivo no es múltiplo del tamaño de un entero.\n";
+        std::cerr << "El tamaño del archivo no es multiplo del tamano de un entero.\n";
         return 1;
     }
 
-    std::cout << "Tamaño del archivo: " << fileSize << " bytes\n";
-    std::cout << "Número de elementos: " << numElements << "\n";
+    std::cout << "Tamano del archivo: " << fileSize << " bytes\n";
+    std::cout << "Numero de elementos: " << numElements << "\n";
 
     auto start = std::chrono::high_resolution_clock::now();
 
+    // Selecciona el algoritmo de ordenamiento basado en el argumento proporcionado
     if (strcmp(algorithm, "QS") == 0) {
         std::cout << "Usando Quick Sort\n";
         quickSort(pagedArray, 0, numElements - 1);
@@ -77,19 +82,20 @@ int main(int argc, char* argv[]) {
 
     int percentage = 0;
 
-    std::ofstream outputFile(outputFilePath, std::ios::trunc); // Open file as text
+    std::ofstream outputFile(outputFilePath, std::ios::trunc);
     if (!outputFile.is_open()) {
         std::cerr << "Error al abrir el archivo para escritura en: " << outputFilePath << "\n";
         return 1;
     }
 
+    // Escribe los elementos ordenados en el archivo de salida
     for (std::size_t i = 0; i < numElements; ++i) {
         outputFile << pagedArray[i];
         if (i != numElements - 1) {
             outputFile << ",";
         }
-
-        if (i % (numElements / 100) == 0) { // Print progress every 1% of the total elements
+        
+        if (i % (numElements / 100) == 0) {
             std::cout << percentage << "%" << "\n";
             percentage += 1;
         }
@@ -105,4 +111,5 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
 
