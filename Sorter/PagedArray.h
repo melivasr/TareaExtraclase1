@@ -18,7 +18,7 @@ public:
     int pageFaults;
     int lastAccesedPage;
     int pageHits;
-    std::size_t numElements; // Agrega esta variable para almacenar el número de elementos
+    std::size_t numElements; // Variable para almacenar el número de elementos
 
     void loadPage(int pageIndex);
     void unloadPage(int pageIndex);

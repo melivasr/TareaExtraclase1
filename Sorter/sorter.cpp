@@ -11,6 +11,11 @@
 #include "Algorithms/quickSort.h"
 
 int main(int argc, char* argv[]) {
+    std::cout << "Número de argumentos: " << argc << "\n";
+    for (int i = 0; i < argc; ++i) {
+        std::cout << "Argumento " << i << ": " << argv[i] << "\n";
+    }
+
     if (argc != 7) {
         std::cerr << "Uso: sorter -input <INPUT FILE PATH> -output <OUTPUT FILE PATH> -alg <ALGORITMO>\n";
         return 1;
@@ -20,9 +25,10 @@ int main(int argc, char* argv[]) {
     const char* inputFilePath = argv[2];
     const char* outputFlag = argv[3];
     const char* outputFilePath = argv[4];
+    const char* algFlag = argv[5];
     const char* algorithm = argv[6];
 
-    if (strcmp(inputFlag, "-input") != 0 || strcmp(outputFlag, "-output") != 0) {
+    if (strcmp(inputFlag, "-input") != 0 || strcmp(outputFlag, "-output") != 0 || strcmp(algFlag, "-alg") != 0) {
         std::cerr << "Uso: sorter -input <INPUT FILE PATH> -output <OUTPUT FILE PATH> -alg <ALGORITMO>\n";
         return 1;
     }
@@ -38,16 +44,17 @@ int main(int argc, char* argv[]) {
         std::cerr << "Error al abrir el archivo para lectura en: " << inputFilePath << "\n";
         return 1;
     }
+
     std::size_t fileSize = inputFile.tellg();
     std::size_t numElements = fileSize / sizeof(int);
 
     if (fileSize % sizeof(int) != 0) {
-        std::cerr << "El tamano del archivo no es multiplo del tamano de un entero.\n";
+        std::cerr << "El tamaño del archivo no es múltiplo del tamaño de un entero.\n";
         return 1;
     }
 
-    std::cout << "Tamano del archivo: " << fileSize << " bytes\n";
-    std::cout << "Numero de elementos: " << numElements << "\n";
+    std::cout << "Tamaño del archivo: " << fileSize << " bytes\n";
+    std::cout << "Número de elementos: " << numElements << "\n";
 
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -68,10 +75,7 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
 
-
-
     int percentage = 0;
-    std::string str2 = "";
 
     std::ofstream outputFile(outputFilePath, std::ios::trunc); // Open file as text
     if (!outputFile.is_open()) {
@@ -81,12 +85,11 @@ int main(int argc, char* argv[]) {
 
     for (std::size_t i = 0; i < numElements; ++i) {
         outputFile << pagedArray[i];
-        if(i != numElements - 1) {
+        if (i != numElements - 1) {
             outputFile << ",";
         }
 
-
-        if (i % (numElements / 100) == 0) { // Print progress every 10% of the total elements
+        if (i % (numElements / 100) == 0) { // Print progress every 1% of the total elements
             std::cout << percentage << "%" << "\n";
             percentage += 1;
         }
@@ -102,3 +105,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+

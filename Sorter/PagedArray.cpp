@@ -18,7 +18,7 @@ PagedArray::PagedArray(const std::string& filePath)
         pageMap[i] = -1;
     }
 
-    srand(static_cast<unsigned>(time(0))); // Inicializa la semilla una vez
+    srand(static_cast<unsigned>(time(0)));
 }
 
 PagedArray::~PagedArray() {
