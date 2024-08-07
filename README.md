@@ -69,13 +69,13 @@ Este programa en C++ sirve para ordenar archivos binarios grandes utilizando dif
 ## Instrucciones de Compilación
 
 **Compila el código utilizando `g++`:**
+```bash
+g++ -o Sorter/sorter.exe Sorter/sorter.cpp Sorter/PagedArray.cpp Sorter/Algorithms/bubbleSort.cpp Sorter/Algorithms/insertionSort.cpp Sorter/Algorithms/quickSort.cpp -ISorter
+```
 
-    ```bash
-    g++ -o Sorter/sorter.exe Sorter/sorter.cpp Sorter/PagedArray.cpp Sorter/Algorithms/bubbleSort.cpp Sorter/Algorithms/insertionSort.cpp Sorter/Algorithms/quickSort.cpp -ISorter
-    ```
+-o Sorter/sorter.exe` especifica el nombre del archivo ejecutable resultante.
 
-    - `-o Sorter/sorter.exe` especifica el nombre del archivo ejecutable resultante.
-    - `-ISorter` indica la ruta del directorio que contiene los archivos de cabecera necesarios.
+-ISorter` indica la ruta del directorio que contiene los archivos de cabecera necesarios.
 
 ## Ejecución del Programa
 
