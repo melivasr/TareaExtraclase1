@@ -107,6 +107,6 @@ Por ejemplo:
 ./Sorter/sorter.exe -input C:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Generator/input.dat -output C:/Users/melis/OneDrive/Documents/GitHub/TareaExtraclase1/Sorter/data.txt -alg QS
 ```
 
-Estas instrucciones son para Windows y fueron utilizadas en CLion. Si estás utilizando Linux o un entorno diferente, los comandos pueden variar.
+Estas instrucciones fueron utilizadas en CLion, Windows. Si estás utilizando Linux o un entorno diferente, los comandos pueden variar.
 
 Asegúrate de tener g++ instalado y correctamente configurado en tu sistema para compilar el código.
